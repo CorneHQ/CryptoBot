@@ -37,6 +37,7 @@ node .
 
 * Live embeds that refresh the values every 10 seconds
 * Make bot more customizable
+* More currencies
 
 ## License
 [GNU v3](https://www.gnu.org/licenses/gpl-3.0.en.html)
