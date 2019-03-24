@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
     .then(function (response) {
 		let moneroEmbed = new Discord.RichEmbed()
 		.setDescription("Monero Values")
-		.setColor("#50C7C7")
+		.setColor(botconfig.embedColor)
 		.addField("Euro", response.data.EUR)
 		.addField("American Dollar", response.data.USD)
 		.addField("Yuan", response.data.CNY)

@@ -1,5 +1,8 @@
 {
 	"token": "TOKEN",
 	"prefix": "!",
-	"apiKey": "APIKEY"
+	"apiKey": "APIKEY",
+	"embedColor": "#50C7C7",
+	"onlineMessage": "Bot is online",
+	"noCommands": "No commands found"
 }

@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
     .then(function (response) {
 		let rippleEmbed = new Discord.RichEmbed()
 		.setDescription("Ripple Values")
-		.setColor("#50C7C7")
+		.setColor(botconfig.embedColor)
 		.addField("Euro", response.data.EUR)
 		.addField("American Dollar", response.data.USD)
 		.addField("Yuan", response.data.CNY)

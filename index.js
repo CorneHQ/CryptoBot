@@ -10,19 +10,18 @@ fs.readdir("./commands/", (err, file) => {
 
     let jsfile = file.filter(f => f.split(".").pop() === "js")
     if(jsfile.length <= 0){
-        console.log("Couldn't find commands.");
+        console.log(botconfig.noCommands);
         return;
     }
 
     jsfile.forEach((f, i) => {
         let props = require(`./commands/${f}`);
-        console.log(`${f} loaded`);
         bot.commands.set(props.help.name, props);
     });
 });
 
 bot.on('ready', () => {
-    console.log("BOT IS ONLINE");
+    console.log(`${botconfig.onlineMessage}`);
 });
 
 bot.on("message", async message => {
