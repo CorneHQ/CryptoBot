@@ -21,6 +21,10 @@ fs.readdir("./commands/", (err, file) => {
     });
 });
 
+bot.on('ready', () => {
+    console.log("BOT IS ONLINE");
+});
+
 bot.on("message", async message => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
