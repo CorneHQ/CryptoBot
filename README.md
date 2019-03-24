@@ -3,25 +3,26 @@
 CryptoBot output the value of the cryptocurrency
 
 ## Installation
+1. Create your bot at https://discordapp.com/developers/applications/
 
-1. Clone the project
+2. Clone the project
 
 ```bash
 git clone https://github.com/CorneHQ/CryptoBot.git
 ```
-2. Install NodeJS (If not installed)
+3. Install NodeJS (If not installed)
 
 ```bash
 sudo apt update
 sudo apt install nodejs npm
 ```
-3. Install the dependencies (Run this command in the bot folder)
+4. Install the dependencies (Run this command in the bot folder)
 ```bash
 npm install
 ``` 
-4. Edit botconfig.json file
+5. Edit botconfig.json file
 
-5. Run the bot
+6. Run the bot
 ```bash
 node .
 ```
