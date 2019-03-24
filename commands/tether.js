@@ -1,13 +1,14 @@
 const Discord = require("discord.js");
 const axios = require("axios");
 const chalk = require("chalk");
+const botconfig = require("../botconfig.json");
 
 module.exports.run = async (bot, message, args) => {
     axios.get('https://min-api.cryptocompare.com/data/price', {
         params: {
 		  fsym: "USDT",
 		  tsyms: "USD,EUR,CNY,RUB",
-		  api_key: "897761cbb66df68597ccd12a08ba51695a35e4ba5f858843c3e0a2ab130a3adf"
+			api_key: botconfig.apiKey
         }
     })
     .then(function (response) {
