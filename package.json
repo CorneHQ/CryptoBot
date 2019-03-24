@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/CorneHQ/CryptoBot/issues"
   },
-  "homepage": "https://github.com/CorneHQ/CryptoBot#readme"
+  "homepage": "https://github.com/CorneHQ/CryptoBot#readme",
+  "dependencies": {
+    "discord.js": "^11.4.2"
+  }
 }
