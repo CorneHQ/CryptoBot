@@ -41,7 +41,7 @@ node .
 ## Todos
 
 * Live embeds that refresh the values every 10 seconds
-* Make bot more customizable
+* Make bot more customizable (DONE)
 * More currencies (DONE)
 
 ## License
