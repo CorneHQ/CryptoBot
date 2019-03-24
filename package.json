@@ -1,0 +1,26 @@
+{
+  "name": "cryptobot",
+  "version": "1.0.0",
+  "description": "Shows the latest values of the cryptocurrency",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CorneHQ/CryptoBot.git"
+  },
+  "keywords": [
+    "Discord",
+    "bot",
+    "Crypto",
+    "Websocket",
+    "API"
+  ],
+  "author": "CorneHQ",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/CorneHQ/CryptoBot/issues"
+  },
+  "homepage": "https://github.com/CorneHQ/CryptoBot#readme"
+}
