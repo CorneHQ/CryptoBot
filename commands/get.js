@@ -3,96 +3,46 @@ const axios = require("axios");
 const chalk = require("chalk");
 const botconfig = require("../botconfig.json");
 
+const currency_codes = ['BTC','AUR','BCH','DASH','DOGE','EOS','ETH','ETC','GRC','LSK','LTC','MZC','XMR','NMC','XEM','PPC','POT','XPM','XRP','XLM','USDT','TIT','XVG','VTC','ZEC','NEO','NXT'];
+const currencies = {
+    BITCOIN: currency_code[0],
+    AURORACOIN: currency_code[1],
+    BITCOINBASH: currency_code[2],
+    DASH: currency_code[3],
+    DOGECOIN: currency_code[4],
+    EOSIO: currency_code[5],
+    ETHEREUM: currency_code[6],
+    ETHEREUMCLASSIC: currency_code[7],
+    GRIDCOIN: currency_code[8],
+    LISK: currency_code[9],
+    LITECOIN: currency_code[10],
+    MAZACOIN: currency_code[111],
+    MONERO: currency_code[12],
+    NAMECOIN: currency_code[13],
+    NEM: currency_code[14],
+    PEERCOIN: currency_code[15],
+    POTCOIN: currency_code[16],
+    PRIMECOIN: currency_code[17],
+    RIPPLE: currency_code[18],
+    STELLAR: currency_code[19],
+    TETHER: currency_code[20],
+    TITCOIN: currency_code[21],
+    VERGE: currency_code[22],
+    VERTCOIN: currency_code[23],
+    ZCASH: currency_code[24]
+};
 module.exports.run = async (bot, message, args) => {
     if(args[0] == null) return message.channel.send("Please fill in a coin. Like: !get lisk");
 
-    let crypto;
-
-    switch(args[0].toLowerCase()){
-        case "bitcoin":
-            crypto = "BTC";
-            break;
-        case "auroracoin":
-            crypto = "AUR";
-            break;
-        case "bitcoincash":
-            crypto = "BCH";
-            break;
-        case "dash":
-            crypto = "DASH";
-            break;
-        case "dogecoin":
-            crypto = "DOGE";
-            break;
-        case "eosio":
-            crypto = "EOS";
-            break;
-        case "ethereum":
-            crypto = "ETH";
-            break;
-        case "ethereumclassic":
-            crypto = "ETC";
-            break;
-        case "gridcoin":
-            crypto = "GRC";
-            break;
-        case "lisk":
-            crypto = "LSK";
-            break;
-        case "litecoin":
-            crypto = "LTC";
-            break;
-        case "mazacoin":
-            crypto = "MZC";
-            break;
-        case "monero":
-            crypto = "XMR";
-            break;
-        case "namecoin":
-            crypto = "NMC";
-            break;
-        case "nem":
-            crypto = "XEM";
-            break;
-        case "neo":
-            crypto = "NEO";
-            break;
-        case "nxt":
-            crypto = "NXT";
-            break;
-        case "peercoin":
-            crypto = "PPC";
-            break;
-        case "potcoin":
-            crypto = "POT";
-            break;
-        case "primecoin":
-            crypto = "XPM";
-            break;
-        case "ripple":
-            crypto = "XRP";
-            break;
-        case "stellar":
-            crypto = "XLM";
-            break;
-        case "tether":
-            crypto = "USDT";
-            break;
-        case "titcoin":
-            crypto = "TIT";
-            break;
-        case "verge":
-            crypto = "XVG";
-            break;
-        case "vertcoin":
-            crypto = "VTC";
-            break;
-        case "zcash":
-            crypto = "ZEC";
-            break;
-        default:
-            message.channel.send("Crypto not found");
-            return;
+    const currency = args[0].toUpperCase();
+    try {
+	if (currency_code.includes(currency))
+	    const crypto = currency_code[currency];
+	else
+            const crypto = currencies[currency];
+    } catch (err) {
+	message.channel.send("Crypto not found");
+        return;
     }
 
     axios.get('https://min-api.cryptocompare.com/data/price', {
