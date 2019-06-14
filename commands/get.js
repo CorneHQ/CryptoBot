@@ -16,7 +16,7 @@ const currencies = {
     GRIDCOIN: currency_code[8],
     LISK: currency_code[9],
     LITECOIN: currency_code[10],
-    MAZACOIN: currency_code[111],
+    MAZACOIN: currency_code[11],
     MONERO: currency_code[12],
     NAMECOIN: currency_code[13],
     NEM: currency_code[14],
