@@ -40,7 +40,7 @@ node .
 
 ## Todos
 
-* Live embeds that refresh the values every 10 seconds
+* Live embeds that refresh the values every 10 seconds (Done)
 * Make bot more customizable (DONE)
 * More currencies (DONE)
 
